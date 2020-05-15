@@ -1,14 +1,18 @@
+
 import React from "react"
 import VideoStyle from "./VideoStyle"
 export default class SearchBar extends React.Component{
   state={term:''}
+
   onInputChange=(event)=>{
     this.setState({term:event.target.value})
   }
+
   onFormSubmit=(event)=>{
     event.preventDefault();
     this.props.onFormSubmit(this.state.term)
   }
+
   render(){
     return(
       <div>

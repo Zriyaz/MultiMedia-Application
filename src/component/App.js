@@ -5,7 +5,7 @@ import youtube from "../Apis/youtube"
 const KEY="AIzaSyBPFHYUYJEyX0otOjP0yL2Kx60LCcD-kk4"
 export default class App extends React.Component{
   
-  state={video:[]}
+  state={videos:[]}
 
   onTermSubmit = async term=>{
     console.log(term)
@@ -18,14 +18,14 @@ export default class App extends React.Component{
       key: KEY
     }
     })
-    this.setState({video:response.data.items})
+    this.setState({videos:response.data.items})
 
   }
   render(){
     return(
       <div className="ui container">
-       <SearchBar onFormSubmit={this.onTermSubmit}/>
-       I have {this.state.videos.length} videos.
+      <SearchBar onFormSubmit={this.onFormSubmit}/>
+      I have {this.state.videos.length} videso.
       </div>
     )
   }
