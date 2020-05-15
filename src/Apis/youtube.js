@@ -3,4 +3,5 @@ import axios from "axios"
 
 
 export default axios.create({
-  baseURl:"https://www.googleapis.com/youtube/v3"})
+  baseURL:"https://www.googleapis.com/youtube/v3",
+  })
